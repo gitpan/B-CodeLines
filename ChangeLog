@@ -1,3 +1,22 @@
+2012-05-26  Rocky Bernstein <rocky@cpan.org>
+
+	* .gitignore, MANIFEST, t/00load.t, t/00test-pod.t,
+	t/10-test-basic.t: Add a couple of boiler-plate tests.
+
+2012-05-26  Rocky Bernstein <rocky@cpan.org>
+
+	* lib/B/CodeLines.pm, t/10-test-basic.t: Strawberry perl doesn't
+	handle backtick. Skip test
+
+2012-04-02  r <rocky@gnu.org>
+
+	* lib/B/CodeLines.pm: Bump version
+
+2012-04-02  r <rocky@gnu.org>
+
+	* .gitignore, B/CodeLines.pm, MANIFEST, MANIFEST.SKIP, META.json,
+	META.yml, dolines.pl, dolines.sh: Get ready for release 1.0
+
 2012-04-02  r <rocky@gnu.org>
 
 	* README.pod: Correct a small typo in -exec example

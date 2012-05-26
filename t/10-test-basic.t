@@ -2,7 +2,12 @@
 use warnings; use strict;
 use English;  use File::Spec;
 use File::Basename;
-use Test::More 'no_plan';
+use Test::More;
+if ($OSNAME eq 'MSWin32') {
+    plan skip_all => "Strawberry Perl doesn't handle backtick" 
+} else {
+    plan;
+}
 
 sub test_it($$$)
 {
@@ -25,3 +30,4 @@ test_it("$EXECUTABLE_NAME -I$lib_dir -MO=CodeLines,-exec -e '
 your(\"Perl code\");
 goes(\"here\");
 '", [3, 4], 'string invocation');
+done_testing;
